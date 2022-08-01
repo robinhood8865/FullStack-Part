@@ -20,13 +20,15 @@ const create = newObject => {
 const update = (id, newObject) => {
   const request = axios.put(`${baseUrl}/${id}`, newObject)
   
-  request.then(response => response.data)
-  .then(changeNote=>{
+  return request.then(response => response.data)
+  
+  // request.then(response => response.data)
+  // .then(changeNote=>{
     
-  })
-  .catch(error => {
-    console.log('fail')
-  })
+  // })
+  // .catch(error => {
+  //   console.log('fail')
+  // })
 }
 
 export default {  getAll,  create,  update}
