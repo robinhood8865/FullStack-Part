@@ -1,6 +1,8 @@
 POST http://localhost:3001/api/notes
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1sdXVra2FpIiwiaWQiOiI2MmViOWM5MjMxMjNlZTFjNmE3NzAwN2MiLCJpYXQiOjE2NTk4MTQ1ODR9.PisZFpw7djY3qi--2l5e33O59Xg4IdzsW1uSKEgaK0c
+
 {
-  "content" : "VS Code REST client",
-  "important": false
+  "content" : "Single Page Apps use token authentication",
+  "important": true
 }

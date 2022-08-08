@@ -17,7 +17,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server -p3001 --watch db.json"
+    "server": "json-server -p3001 --watch db.json",
+    "build:ui": "rm -rf build && cd ../part1/ && npm run build && cp -r build ../server",
+    "deploy": "git push heroku main",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",    
+    "logs:prod": "heroku logs --tail"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +43,10 @@
   },
   "devDependencies": {
     "json-server": "^0.17.0"
-  }
+  },
+
+  "resolutions": {
+    "mini-css-extract-plugin": "2.4.5"
+  },
+  "proxy" : "http://localhost:3001"
 }
